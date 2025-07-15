@@ -2,7 +2,6 @@ ORG 0x7c00
 BITS 16
 
 start:
-    ; --- Limpia pantalla (opcional) ---
     mov ah, 0x00
     mov al, 0x03    ; Modo texto 80x25
     int 0x10
@@ -32,7 +31,6 @@ imprimir_bienvenida:
     mov ss, ax
     mov sp, 0x7c00
 
-    ; --- Limpia pantalla (opcional) ---
     mov ah, 0x00
     mov al, 0x03    ; Modo texto 80x25
     int 0x10
